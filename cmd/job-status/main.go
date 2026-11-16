@@ -24,7 +24,7 @@ import (
 
 	"github.com/cyverse-de/configurate"
 	"github.com/cyverse-de/dbutil"
-	"github.com/cyverse-de/messaging/v9"
+	"github.com/cyverse-de/messaging/v12"
 	"github.com/cyverse-de/version"
 	_ "github.com/lib/pq"
 	"github.com/sirupsen/logrus"
@@ -141,7 +141,14 @@ func main() {
 	}
 	defer consumerClient.Close()
 
-	go consumerClient.Listen()
+	// Listen used to call os.Exit itself when the connection dropped; since
+	// messaging v12 it returns an error instead, so exit here to keep the
+	// restart-on-connection-loss behavior described above.
+	go func() {
+		if err := consumerClient.ListenWithError(); err != nil {
+			log.Fatal(err)
+		}
+	}()
 
 	rec := recorder.New(db)
 	consumerClient.AddConsumer(

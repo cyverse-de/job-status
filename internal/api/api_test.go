@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cyverse-de/messaging/v9"
+	"github.com/cyverse-de/messaging/v12"
 )
 
 type mockPublisher struct {
