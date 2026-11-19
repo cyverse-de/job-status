@@ -4,14 +4,14 @@ go 1.27
 
 require (
 	github.com/DATA-DOG/go-sqlmock v1.5.2
-	github.com/cyverse-de/configurate v0.0.0-20260305004742-e3d1c1150f1e
-	github.com/cyverse-de/dbutil v1.0.1
-	github.com/cyverse-de/messaging/v12 v12.0.2
-	github.com/cyverse-de/model/v10 v10.0.2
-	github.com/cyverse-de/version v0.0.0-20200527190517-b40800dcc78b
+	github.com/cyverse-de/configurate v0.4.0
+	github.com/cyverse-de/dbutil v1.0.2
+	github.com/cyverse-de/messaging/v12 v12.0.3
+	github.com/cyverse-de/model/v10 v10.0.4
+	github.com/cyverse-de/version v0.0.0-20261118185406-b85490505c2e
 	github.com/gorilla/mux v1.8.1
 	github.com/lib/pq v1.12.3
-	github.com/rabbitmq/amqp091-go v1.11.0
+	github.com/rabbitmq/amqp091-go v1.17.0
 	github.com/sirupsen/logrus v1.10.2
 	github.com/spf13/viper v1.21.0
 	golang.org/x/sync v0.25.0
