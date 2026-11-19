@@ -3,7 +3,7 @@ package api
 import (
 	"context"
 
-	"github.com/cyverse-de/messaging/v9"
+	"github.com/cyverse-de/messaging/v12"
 )
 
 // JobUpdatePublisher is the interface for types that need to publish a job

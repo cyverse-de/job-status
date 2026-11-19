@@ -8,9 +8,9 @@ import (
 	"time"
 
 	sqlmock "github.com/DATA-DOG/go-sqlmock"
-	"github.com/cyverse-de/messaging/v9"
-	"github.com/cyverse-de/model/v6"
-	"github.com/streadway/amqp"
+	"github.com/cyverse-de/messaging/v12"
+	"github.com/cyverse-de/model/v10"
+	amqp "github.com/rabbitmq/amqp091-go"
 )
 
 type mockAcknowledger struct {
